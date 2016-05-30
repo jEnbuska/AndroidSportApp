@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.MapListFragment">
+    <!--<Spinner
+        android:id="@+id/sortby_spinner"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />-->
+
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/list_fragment_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary">
+        TODO add sync imageBtn
+        <ImageButton
+            android:id="@+id/listview_start_stop_switch"
+            android:background="@drawable/start_button_background"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+    </android.support.v7.widget.Toolbar>-->
+
+    <android.support.v7.widget.RecyclerView
+        tools:context="com.pepster.temp.MyAdapter"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map_recycler_view"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+        <android.support.design.widget.FloatingActionButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fab"
+            app:borderWidth="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:onClick="onRecordClicked"
+            android:layout_margin="7dp"
+            app:backgroundTint="@android:color/holo_red_dark"/>
+
+</RelativeLayout>

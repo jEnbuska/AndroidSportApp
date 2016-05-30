@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fragment_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_with_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/login_with_facebook" />
+
+    <EditText android:layout_height="wrap_content" android:id="@+id/txtUsername"
+        android:layout_width="match_parent"
+        android:hint="E-Mail"
+        android:inputType="textEmailAddress">
+        <requestFocus/>
+    </EditText>
+    <EditText android:layout_height="wrap_content"
+        android:inputType="textPassword" android:id="@+id/txtPassword"
+        android:layout_width="match_parent"
+        android:hint="Password">
+    </EditText>
+    <Button
+        android:id="@+id/login_with_password"
+        android:text="@string/login_with_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0c0c0c" />
+    <Button
+        android:id="@+id/forgot_password"
+        android:text="Forgot password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0c0c0c"/>
+</LinearLayout>

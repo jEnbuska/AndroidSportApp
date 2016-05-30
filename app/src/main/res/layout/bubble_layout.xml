@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:id="@+id/info_window_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/marker_window_bg">
+    <!--ALL VIEWS THAT HAVE 'BUBBLE...' IN THEIR ID ARE MANDATORY, DO NOT CHANGE THEIR ID!!-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/bubble_title"
+            android:textSize="20sp"
+            android:text="bubble_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Switch
+            android:id="@+id/peppoint_switch"
+            android:paddingLeft="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/play_peptalk_message_btn"
+            android:background="@drawable/sound_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <EditText
+            android:id="@+id/message_ed"
+            android:singleLine="true"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/peppoint_type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/peppoint_types">
+        </android.support.v7.widget.AppCompatSpinner>
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/peppoint_language_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/peppoint_languages">
+        </android.support.v7.widget.AppCompatSpinner>
+    </LinearLayout>
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/radius_seekbar"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        app:dsb_rippleColor="@android:color/holo_green_light"
+        app:dsb_min="@integer/radius_min"
+        app:dsb_max="@integer/radius_max" />
+
+    <TextView
+        android:id="@+id/pep_point_radius_tv"
+        android:text="@string/radius_text"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:id="@+id/bin_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_bin"/>
+
+    <TextView
+        android:id="@+id/bubble_subdescription"
+        style="@style/default_hidden"/>
+
+    <ImageView
+        android:id="@+id/bubble_image"
+        style="@style/default_hidden" />
+
+    <Button
+        android:id="@+id/bubble_moreinfo"
+        style="@style/default_hidden" />
+    <TextView
+        android:id="@+id/bubble_description"
+        android:text="bubble_description"
+        style="@style/default_hidden"/>
+</LinearLayout>

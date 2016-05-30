@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="map_grid_cols" type="integer">1</integer>
+    <integer name="radius_max">100</integer>
+    <integer name="radius_default">20</integer>
+    <integer name="radius_min">8</integer>
+</resources>

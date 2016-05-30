@@ -1,0 +1,45 @@
+<com.pepster.views.MapCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/map_card_vertical_margin"
+    android:layout_marginBottom="@dimen/map_card_vertical_margin"
+    android:layout_marginLeft="@dimen/map_card_horizontal_margin"
+    android:layout_marginRight="@dimen/map_card_horizontal_margin"
+    android:clickable="true"
+    android:onClick="onMapListItemClick"
+    card_view:cardCornerRadius="1dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:map="http://schemas.android.com/tools"
+        android:padding="6dip">
+
+        <com.google.android.gms.maps.MapView
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/list_map"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:clickable="false"
+            map:liteMode="true"/>
+        <TextView
+            android:id="@+id/list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title"
+            style="@style/MapCardTitle" />
+
+        <ImageButton
+            android:id="@+id/:map_content_settings_ib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_perm_data_setting_black_24dp"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:paddingTop="216dp"
+            android:paddingRight="11dp"/>
+    </RelativeLayout>
+</com.pepster.views.MapCardView>
